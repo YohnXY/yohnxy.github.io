@@ -64,7 +64,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Perl,FTP,SFTP," />
 
 
 
@@ -80,15 +80,85 @@
 
 
 
-<meta name="description" content="just do it">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Yohn's Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="Perl网络开发中常使用FTP/SFTP进行文件传输，常见的模块Net::FTP，Net::SFTP可满足需求。
+Net::FTP模块方法
+
+
+说明
+方法
+
+
+
+
+new ([ HOST ] [, OPTIONS ])
+构造对象
+
+
+login ([LOGIN [,PASSWORD [, ACCOUNT] ] ])
+登录
+
+
+binary ()
+字节数据模式
+
+
+cwd ( [ DIR ] )
+切">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Perl FTP/SFTP 开发">
+<meta property="og:url" content="http://yoursite.com/2016/04/29/Perl-FTP-SFTP-开发/index.html">
 <meta property="og:site_name" content="Yohn's Blog">
-<meta property="og:description" content="just do it">
+<meta property="og:description" content="Perl网络开发中常使用FTP/SFTP进行文件传输，常见的模块Net::FTP，Net::SFTP可满足需求。
+Net::FTP模块方法
+
+
+说明
+方法
+
+
+
+
+new ([ HOST ] [, OPTIONS ])
+构造对象
+
+
+login ([LOGIN [,PASSWORD [, ACCOUNT] ] ])
+登录
+
+
+binary ()
+字节数据模式
+
+
+cwd ( [ DIR ] )
+切">
+<meta property="og:updated_time" content="2016-05-03T07:59:54.600Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yohn's Blog">
-<meta name="twitter:description" content="just do it">
+<meta name="twitter:title" content="Perl FTP/SFTP 开发">
+<meta name="twitter:description" content="Perl网络开发中常使用FTP/SFTP进行文件传输，常见的模块Net::FTP，Net::SFTP可满足需求。
+Net::FTP模块方法
+
+
+说明
+方法
+
+
+
+
+new ([ HOST ] [, OPTIONS ])
+构造对象
+
+
+login ([LOGIN [,PASSWORD [, ACCOUNT] ] ])
+登录
+
+
+binary ()
+字节数据模式
+
+
+cwd ( [ DIR ] )
+切">
 
 
 
@@ -106,7 +176,7 @@
   };
 </script>
 
-  <title> Yohn's Blog </title>
+  <title> Perl FTP/SFTP 开发 | Yohn's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -127,9 +197,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -226,9 +294,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -248,10 +316,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/04/29/Perl-FTP-SFTP-开发/" itemprop="url">
-                  Perl FTP/SFTP 开发
-                </a>
+                Perl FTP/SFTP 开发
               
             
           </h1>
@@ -310,9 +375,7 @@
       
 
       
-        
-          
-            <p>Perl网络开发中常使用FTP/SFTP进行文件传输，常见的模块<a href="http://search.cpan.org/~shay/libnet-3.08/lib/Net/FTP.pm" target="_blank" rel="external">Net::FTP</a>，<a href="http://search.cpan.org/~dbrobins/Net-SFTP-0.10/lib/Net/SFTP.pm" target="_blank" rel="external">Net::SFTP</a>可满足需求。</p>
+        <p>Perl网络开发中常使用FTP/SFTP进行文件传输，常见的模块<a href="http://search.cpan.org/~shay/libnet-3.08/lib/Net/FTP.pm" target="_blank" rel="external">Net::FTP</a>，<a href="http://search.cpan.org/~dbrobins/Net-SFTP-0.10/lib/Net/SFTP.pm" target="_blank" rel="external">Net::SFTP</a>可满足需求。</p>
 <h3 id="Net-FTP"><a href="#Net-FTP" class="headerlink" title="Net::FTP"></a>Net::FTP</h3><h4 id="模块方法"><a href="#模块方法" class="headerlink" title="模块方法"></a>模块方法</h4><table>
 <thead>
 <tr>
@@ -418,36 +481,47 @@
 <h4 id="样例代码-1"><a href="#样例代码-1" class="headerlink" title="样例代码"></a>样例代码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">use Net::SFTP;</span><br><span class="line"></span><br><span class="line">my $sftp;</span><br><span class="line">my $host = &quot;192.168.1.10&quot;;</span><br><span class="line">my %args = (</span><br><span class="line">    &quot;user&quot;     =&gt; &quot;user&quot;,</span><br><span class="line">    &quot;password&quot; =&gt; &quot;password&quot;,</span><br><span class="line">    &quot;debug&quot;    =&gt; 0</span><br><span class="line">);</span><br><span class="line">unless ( $sftp = Net::SFTP-&gt;new( $host, %args ) ) &#123;</span><br><span class="line">    print &quot;ERROR - Cannot connect TO SFTP, $@\n&quot;;</span><br><span class="line">    exit(1);</span><br><span class="line">&#125;</span><br><span class="line">$sftp-&gt;get( &quot;/home/data.txt&quot;, &quot;data.txt&quot; );</span><br><span class="line">unless ( $sftp-&gt;status == 0 ) &#123;</span><br><span class="line">    print &quot;ERROR - Get file failed, $!\n&quot;;</span><br><span class="line">    exit(1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="Perl模块下载源"><a href="#Perl模块下载源" class="headerlink" title="Perl模块下载源"></a>Perl模块下载源</h3><p>CPAN: <a href="http://search.cpan.org/" target="_blank" rel="external">http://search.cpan.org/</a><br>MetaCPAN: <a href="https://metacpan.org/" target="_blank" rel="external">https://metacpan.org/</a></p>
 
-          
-        
       
     </div>
     
     <div>
       
+        
+      
     </div>
 
     <div>
+      
+        
       
     </div>
 
     <footer class="post-footer">
       
-
+        <div class="post-tags">
+          
+            <a href="/tags/Perl/" rel="tag">#Perl</a>
+          
+            <a href="/tags/FTP/" rel="tag">#FTP</a>
+          
+            <a href="/tags/SFTP/" rel="tag">#SFTP</a>
+          
+        </div>
       
 
       
+
       
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -455,6 +529,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -474,8 +552,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -551,6 +638,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Net-FTP"><span class="nav-number">1.</span> <span class="nav-text">Net::FTP</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#模块方法"><span class="nav-number">1.1.</span> <span class="nav-text">模块方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#样例代码"><span class="nav-number">1.2.</span> <span class="nav-text">样例代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Net-SFTP"><span class="nav-number">2.</span> <span class="nav-text">Net::SFTP</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#模块方法-1"><span class="nav-number">2.1.</span> <span class="nav-text">模块方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#样例代码-1"><span class="nav-number">2.2.</span> <span class="nav-text">样例代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Perl模块下载源"><span class="nav-number">3.</span> <span class="nav-text">Perl模块下载源</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -654,6 +752,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
