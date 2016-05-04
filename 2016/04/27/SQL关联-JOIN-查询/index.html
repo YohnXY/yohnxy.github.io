@@ -64,7 +64,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Perl,FTP,SFTP," />
+  <meta name="keywords" content="SQL,Database," />
 
 
 
@@ -80,85 +80,120 @@
 
 
 
-<meta name="description" content="Perl网络开发中常使用FTP/SFTP进行文件传输，常见的模块Net::FTP，Net::SFTP可满足需求。
-Net::FTP模块方法
-
-
-说明
-方法
+<meta name="description" content="表关联，不少同学常常忘记这些简单语法
 
 
 
 
-new ([ HOST ] [, OPTIONS ])
-构造对象
+关联方式
+语法
+示意图
 
 
-login ([LOGIN [,PASSWORD [, ACCOUNT] ] ])
-登录
 
 
-binary ()
-字节数据模式
+内连接
+[INNER] JOIN
 
 
-cwd ( [ DIR ] )
-切">
+
+左连接（左外连接）
+LEFT [OUTER] JOIN
+
+
+
+右连接（右外连接）
+RIGHT[OUTER] JOIN
+
+
+
+全外连接
+FULL[OUTER] JOIN
+
+
+
+交叉连接
+CROSS JOIN">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Perl FTP/SFTP 开发">
-<meta property="og:url" content="http://yoursite.com/2016/04/29/Perl-FTP-SFTP-开发/index.html">
+<meta property="og:title" content="SQL关联(JOIN)查询">
+<meta property="og:url" content="http://yoursite.com/2016/04/27/SQL关联-JOIN-查询/index.html">
 <meta property="og:site_name" content="Yohn's Blog">
-<meta property="og:description" content="Perl网络开发中常使用FTP/SFTP进行文件传输，常见的模块Net::FTP，Net::SFTP可满足需求。
-Net::FTP模块方法
-
-
-说明
-方法
+<meta property="og:description" content="表关联，不少同学常常忘记这些简单语法
 
 
 
 
-new ([ HOST ] [, OPTIONS ])
-构造对象
+关联方式
+语法
+示意图
 
 
-login ([LOGIN [,PASSWORD [, ACCOUNT] ] ])
-登录
 
 
-binary ()
-字节数据模式
+内连接
+[INNER] JOIN
 
 
-cwd ( [ DIR ] )
-切">
-<meta property="og:updated_time" content="2016-05-03T07:59:54.600Z">
+
+左连接（左外连接）
+LEFT [OUTER] JOIN
+
+
+
+右连接（右外连接）
+RIGHT[OUTER] JOIN
+
+
+
+全外连接
+FULL[OUTER] JOIN
+
+
+
+交叉连接
+CROSS JOIN">
+<meta property="og:image" content="http://yoursite.com/images/2016-05-04_103800.png">
+<meta property="og:image" content="http://yoursite.com/images/2016-05-04_103900.png">
+<meta property="og:image" content="http://yoursite.com/images/2016-05-04_104000.png">
+<meta property="og:image" content="http://yoursite.com/images/2016-05-04_104050.png">
+<meta property="og:updated_time" content="2016-05-04T02:59:41.224Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Perl FTP/SFTP 开发">
-<meta name="twitter:description" content="Perl网络开发中常使用FTP/SFTP进行文件传输，常见的模块Net::FTP，Net::SFTP可满足需求。
-Net::FTP模块方法
-
-
-说明
-方法
+<meta name="twitter:title" content="SQL关联(JOIN)查询">
+<meta name="twitter:description" content="表关联，不少同学常常忘记这些简单语法
 
 
 
 
-new ([ HOST ] [, OPTIONS ])
-构造对象
+关联方式
+语法
+示意图
 
 
-login ([LOGIN [,PASSWORD [, ACCOUNT] ] ])
-登录
 
 
-binary ()
-字节数据模式
+内连接
+[INNER] JOIN
 
 
-cwd ( [ DIR ] )
-切">
+
+左连接（左外连接）
+LEFT [OUTER] JOIN
+
+
+
+右连接（右外连接）
+RIGHT[OUTER] JOIN
+
+
+
+全外连接
+FULL[OUTER] JOIN
+
+
+
+交叉连接
+CROSS JOIN">
+<meta name="twitter:image" content="http://yoursite.com/images/2016-05-04_103800.png">
 
 
 
@@ -176,7 +211,7 @@ cwd ( [ DIR ] )
   };
 </script>
 
-  <title> Perl FTP/SFTP 开发 | Yohn's Blog </title>
+  <title> SQL关联(JOIN)查询 | Yohn's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -316,7 +351,7 @@ cwd ( [ DIR ] )
             
             
               
-                Perl FTP/SFTP 开发
+                SQL关联(JOIN)查询
               
             
           </h1>
@@ -328,8 +363,8 @@ cwd ( [ DIR ] )
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-29T09:51:44+08:00" content="2016-04-29">
-              2016-04-29
+            <time itemprop="dateCreated" datetime="2016-04-27T15:15:43+08:00" content="2016-04-27">
+              2016-04-27
             </time>
           </span>
 
@@ -342,8 +377,8 @@ cwd ( [ DIR ] )
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/编程开发/" itemprop="url" rel="index">
-                    <span itemprop="name">编程开发</span>
+                  <a href="/categories/数据库/" itemprop="url" rel="index">
+                    <span itemprop="name">数据库</span>
                   </a>
                 </span>
 
@@ -375,111 +410,44 @@ cwd ( [ DIR ] )
       
 
       
-        <p>Perl网络开发中常使用FTP/SFTP进行文件传输，常见的模块<a href="http://search.cpan.org/~shay/libnet-3.08/lib/Net/FTP.pm" target="_blank" rel="external">Net::FTP</a>，<a href="http://search.cpan.org/~dbrobins/Net-SFTP-0.10/lib/Net/SFTP.pm" target="_blank" rel="external">Net::SFTP</a>可满足需求。</p>
-<h3 id="Net-FTP"><a href="#Net-FTP" class="headerlink" title="Net::FTP"></a>Net::FTP</h3><h4 id="模块方法"><a href="#模块方法" class="headerlink" title="模块方法"></a>模块方法</h4><table>
+        <blockquote>
+<p>表关联，不少同学常常忘记这些简单语法</p>
+</blockquote>
+<table>
 <thead>
 <tr>
-<th>说明</th>
-<th>方法</th>
+<th>关联方式</th>
+<th>语法</th>
+<th>示意图</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>new ([ HOST ] [, OPTIONS ])</td>
-<td>构造对象</td>
+<td>内连接</td>
+<td>[INNER] JOIN</td>
+<td><img src="/images/2016-05-04_103800.png" alt=""></td>
 </tr>
 <tr>
-<td>login ([LOGIN [,PASSWORD [, ACCOUNT] ] ])</td>
-<td>登录</td>
+<td>左连接（左外连接）</td>
+<td>LEFT [OUTER] JOIN</td>
+<td><img src="/images/2016-05-04_103900.png" alt=""></td>
 </tr>
 <tr>
-<td>binary ()</td>
-<td>字节数据模式</td>
+<td>右连接（右外连接）</td>
+<td>RIGHT[OUTER] JOIN</td>
+<td><img src="/images/2016-05-04_104000.png" alt=""></td>
 </tr>
 <tr>
-<td>cwd ( [ DIR ] )</td>
-<td>切换远程目录</td>
+<td>全外连接</td>
+<td>FULL[OUTER] JOIN</td>
+<td><img src="/images/2016-05-04_104050.png" alt=""></td>
 </tr>
 <tr>
-<td>ls ( [ DIR ] )</td>
-<td>列目录</td>
-</tr>
-<tr>
-<td>dir ( [ DIR ] )</td>
-<td>列目录</td>
-</tr>
-<tr>
-<td>get ( REMOTE_FILE [, LOCAL_FILE [, WHERE]] )</td>
-<td>下载文件</td>
-</tr>
-<tr>
-<td>put ( LOCAL_FILE [, REMOTE_FILE ] )</td>
-<td>上传文件</td>
-</tr>
-<tr>
-<td>size ( FILE )</td>
-<td>获取文件大小</td>
-</tr>
-<tr>
-<td>mdtm ( FILE )</td>
-<td>获取文件修改时间</td>
-</tr>
-<tr>
-<td>delete ( FILENAME )</td>
-<td>删除文件</td>
-</tr>
-<tr>
-<td>rename ( OLDNAME, NEWNAME )</td>
-<td>文件重命名</td>
-</tr>
-<tr>
-<td>mkdir ( DIR [, RECURSE ])</td>
-<td>创建目录</td>
-</tr>
-<tr>
-<td>rmdir ( DIR [, RECURSE ])</td>
-<td>删除目录</td>
-</tr>
-<tr>
-<td>quit ()</td>
-<td>退出</td>
+<td>交叉连接</td>
+<td>CROSS JOIN</td>
 </tr>
 </tbody>
 </table>
-<h4 id="样例代码"><a href="#样例代码" class="headerlink" title="样例代码"></a>样例代码</h4><p>文件上传、下载<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">use Net::FTP;</span><br><span class="line"></span><br><span class="line">my $ftp;</span><br><span class="line">my $host     = &quot;192.168.1.10&quot;;</span><br><span class="line">my $user     = &quot;user&quot;;</span><br><span class="line">my $password = &quot;password&quot;;</span><br><span class="line"></span><br><span class="line">unless ( $ftp = Net::FTP-&gt;new( $host, Port =&gt; 21, Timeout =&gt; 30 ) ) &#123;</span><br><span class="line">    print &quot;ERROR - Cannot connect TO FTP, $@\n&quot;;</span><br><span class="line">    exit(1);</span><br><span class="line">&#125;</span><br><span class="line">unless ( $ftp-&gt;login( $user, $password ) ) &#123;</span><br><span class="line">    print sprintf( &quot;ERROR - Cannot logon, %s\n&quot;, $ftp-&gt;message );</span><br><span class="line">    exit(1);</span><br><span class="line">&#125;</span><br><span class="line">unless ( $ftp-&gt;cwd(&quot;/files&quot;) ) &#123;</span><br><span class="line">    print sprintf( &quot;ERROR - Cannot change directory, %s\n&quot;, $ftp-&gt;message );</span><br><span class="line">    exit(1);</span><br><span class="line">&#125;</span><br><span class="line">$ftp-&gt;binary();</span><br><span class="line">unless ( $ftp-&gt;put( &quot;data.txt&quot;, &quot;data.txt&quot; ) ) &#123;</span><br><span class="line">    print sprintf( &quot;ERROR - Put file failed, %s\n&quot;, $ftp-&gt;message );</span><br><span class="line">    exit(1);</span><br><span class="line">&#125;</span><br><span class="line">unless ( $ftp-&gt;get( &quot;data.zip&quot;, &quot;data.zip&quot; ) ) &#123;</span><br><span class="line">    print sprintf( &quot;ERROR - Get file failed, %s\n&quot;, $ftp-&gt;message );</span><br><span class="line">    exit(1);</span><br><span class="line">&#125;</span><br><span class="line">$ftp-&gt;quit();</span><br></pre></td></tr></table></figure></p>
-<p>文件时间<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">my $mtime = $handler-&gt;mdtm($file)</span><br><span class="line">my ( $sec, $min, $hour, $day, $mon, $year ) = localtime($mtime);</span><br><span class="line">$mtime = sprintf( &quot;%04d-%02d-%02d %02d:%02d:%02d&quot;, $year + 1900, $mon + 1, $day, $hour, $min, $sec );</span><br><span class="line">print &quot;File modification time is $mtime\n&quot;;</span><br></pre></td></tr></table></figure></p>
-<h3 id="Net-SFTP"><a href="#Net-SFTP" class="headerlink" title="Net::SFTP"></a>Net::SFTP</h3><h4 id="模块方法-1"><a href="#模块方法-1" class="headerlink" title="模块方法"></a>模块方法</h4><table>
-<thead>
-<tr>
-<th>说明</th>
-<th>方法</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>new($host, %args)</td>
-<td>构造对象</td>
-</tr>
-<tr>
-<td>do_remove($path)</td>
-<td>切换目录</td>
-</tr>
-<tr>
-<td>ls(\$remote [, $subref ])</td>
-<td>列目录</td>
-</tr>
-<tr>
-<td>get(\$remote [, $local [, \&amp;callback ] ])</td>
-<td>下载文件</td>
-</tr>
-<tr>
-<td>put(\$local, $remote [, \&amp;callback ])</td>
-<td>上传文件</td>
-</tr>
-</tbody>
-</table>
-<h4 id="样例代码-1"><a href="#样例代码-1" class="headerlink" title="样例代码"></a>样例代码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">use Net::SFTP;</span><br><span class="line"></span><br><span class="line">my $sftp;</span><br><span class="line">my $host = &quot;192.168.1.10&quot;;</span><br><span class="line">my %args = (</span><br><span class="line">    &quot;user&quot;     =&gt; &quot;user&quot;,</span><br><span class="line">    &quot;password&quot; =&gt; &quot;password&quot;,</span><br><span class="line">    &quot;debug&quot;    =&gt; 0</span><br><span class="line">);</span><br><span class="line">unless ( $sftp = Net::SFTP-&gt;new( $host, %args ) ) &#123;</span><br><span class="line">    print &quot;ERROR - Cannot connect TO SFTP, $@\n&quot;;</span><br><span class="line">    exit(1);</span><br><span class="line">&#125;</span><br><span class="line">$sftp-&gt;get( &quot;/home/data.txt&quot;, &quot;data.txt&quot; );</span><br><span class="line">unless ( $sftp-&gt;status == 0 ) &#123;</span><br><span class="line">    print &quot;ERROR - Get file failed, $!\n&quot;;</span><br><span class="line">    exit(1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Perl模块下载源"><a href="#Perl模块下载源" class="headerlink" title="Perl模块下载源"></a>Perl模块下载源</h3><p>CPAN: <a href="http://search.cpan.org/" target="_blank" rel="external">http://search.cpan.org/</a><br>MetaCPAN: <a href="https://metacpan.org/" target="_blank" rel="external">https://metacpan.org/</a></p>
 
       
     </div>
@@ -500,11 +468,9 @@ cwd ( [ DIR ] )
       
         <div class="post-tags">
           
-            <a href="/tags/Perl/" rel="tag">#Perl</a>
+            <a href="/tags/SQL/" rel="tag">#SQL</a>
           
-            <a href="/tags/FTP/" rel="tag">#FTP</a>
-          
-            <a href="/tags/SFTP/" rel="tag">#SFTP</a>
+            <a href="/tags/Database/" rel="tag">#Database</a>
           
         </div>
       
@@ -513,13 +479,13 @@ cwd ( [ DIR ] )
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/04/27/SQL关联-JOIN-查询/" rel="next" title="SQL关联(JOIN)查询">
-                <i class="fa fa-chevron-left"></i> SQL关联(JOIN)查询
-              </a>
-            
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/04/29/Perl-FTP-SFTP-开发/" rel="prev" title="Perl FTP/SFTP 开发">
+                Perl FTP/SFTP 开发 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -659,7 +625,7 @@ cwd ( [ DIR ] )
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Net-FTP"><span class="nav-number">1.</span> <span class="nav-text">Net::FTP</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#模块方法"><span class="nav-number">1.1.</span> <span class="nav-text">模块方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#样例代码"><span class="nav-number">1.2.</span> <span class="nav-text">样例代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Net-SFTP"><span class="nav-number">2.</span> <span class="nav-text">Net::SFTP</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#模块方法-1"><span class="nav-number">2.1.</span> <span class="nav-text">模块方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#样例代码-1"><span class="nav-number">2.2.</span> <span class="nav-text">样例代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Perl模块下载源"><span class="nav-number">3.</span> <span class="nav-text">Perl模块下载源</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
         </section>
