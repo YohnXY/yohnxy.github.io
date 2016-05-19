@@ -64,7 +64,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="hadoop,hdfs,mapreduce," />
 
 
 
@@ -80,15 +80,109 @@
 
 
 
-<meta name="description" content="just do it">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Yohn's Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="服务器配置
+
+
+服务器
+配置
+IP地址
+
+
+
+
+h1
+虚拟机:Mem1G
+192.168.20.11
+
+
+h2
+虚拟机:Mem1G
+192.168.20.12
+
+
+h3
+虚拟机:Mem1G
+192.168.20.13
+
+
+
+软件清单
+
+jdk-7u79-linux-x64
+hadoop-2.6.4
+
+安装JDKhadoop无法使用openjdk, 卸载系统自带的openjdk，安装jdk-x641">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hadoop - 安装部署及MapReduce测试">
+<meta property="og:url" content="http://yoursite.com/2016/05/01/Hadoop-安装部署及MapReduce测试/index.html">
 <meta property="og:site_name" content="Yohn's Blog">
-<meta property="og:description" content="just do it">
+<meta property="og:description" content="服务器配置
+
+
+服务器
+配置
+IP地址
+
+
+
+
+h1
+虚拟机:Mem1G
+192.168.20.11
+
+
+h2
+虚拟机:Mem1G
+192.168.20.12
+
+
+h3
+虚拟机:Mem1G
+192.168.20.13
+
+
+
+软件清单
+
+jdk-7u79-linux-x64
+hadoop-2.6.4
+
+安装JDKhadoop无法使用openjdk, 卸载系统自带的openjdk，安装jdk-x641">
+<meta property="og:updated_time" content="2016-05-19T17:27:19.425Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yohn's Blog">
-<meta name="twitter:description" content="just do it">
+<meta name="twitter:title" content="Hadoop - 安装部署及MapReduce测试">
+<meta name="twitter:description" content="服务器配置
+
+
+服务器
+配置
+IP地址
+
+
+
+
+h1
+虚拟机:Mem1G
+192.168.20.11
+
+
+h2
+虚拟机:Mem1G
+192.168.20.12
+
+
+h3
+虚拟机:Mem1G
+192.168.20.13
+
+
+
+软件清单
+
+jdk-7u79-linux-x64
+hadoop-2.6.4
+
+安装JDKhadoop无法使用openjdk, 卸载系统自带的openjdk，安装jdk-x641">
 
 
 
@@ -106,7 +200,7 @@
   };
 </script>
 
-  <title> Yohn's Blog </title>
+  <title> Hadoop - 安装部署及MapReduce测试 | Yohn's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -127,9 +221,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -226,9 +318,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -248,10 +340,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/05/01/Hadoop-安装部署及MapReduce测试/" itemprop="url">
-                  Hadoop - 安装部署及MapReduce测试
-                </a>
+                Hadoop - 安装部署及MapReduce测试
               
             
           </h1>
@@ -310,9 +399,7 @@
       
 
       
-        
-          
-            <h3 id="服务器配置"><a href="#服务器配置" class="headerlink" title="服务器配置"></a>服务器配置</h3><table>
+        <h3 id="服务器配置"><a href="#服务器配置" class="headerlink" title="服务器配置"></a>服务器配置</h3><table>
 <thead>
 <tr>
 <th>服务器</th>
@@ -372,253 +459,61 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hadoop fs -put data.txt /in</span><br></pre></td></tr></table></figure>
 <p>运行wordcount<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /hadoop/hadoop/share/hadoop/mapreduce</span><br><span class="line">hadoop jar hadoop-mapreduce-examples-2.6.4.jar wordcount /in/data.txt /out/data.out</span><br><span class="line">hadoop fs -cat /out/data.out/part-r-00000</span><br></pre></td></tr></table></figure></p>
 
-          
-        
       
     </div>
     
     <div>
       
+        
+      
     </div>
 
     <div>
+      
+        
       
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/04/29/Perl-FTP-SFTP-开发/" itemprop="url">
-                  Perl FTP/SFTP 开发
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-29T09:51:44+08:00" content="2016-04-29">
-              2016-04-29
-            </time>
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/编程开发/" itemprop="url" rel="index">
-                    <span itemprop="name">编程开发</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
+            <a href="/tags/hadoop/" rel="tag">#hadoop</a>
           
-
+            <a href="/tags/hdfs/" rel="tag">#hdfs</a>
           
-            
-          
-
-          
-
-          
-          
-
+            <a href="/tags/mapreduce/" rel="tag">#mapreduce</a>
           
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>Perl网络开发中常使用FTP/SFTP进行文件传输，常见的模块<a href="http://search.cpan.org/~shay/libnet-3.08/lib/Net/FTP.pm" target="_blank" rel="external">Net::FTP</a>，<a href="http://search.cpan.org/~dbrobins/Net-SFTP-0.10/lib/Net/SFTP.pm" target="_blank" rel="external">Net::SFTP</a>可满足需求。</p>
-<h3 id="Net-FTP"><a href="#Net-FTP" class="headerlink" title="Net::FTP"></a>Net::FTP</h3><h4 id="模块方法"><a href="#模块方法" class="headerlink" title="模块方法"></a>模块方法</h4><table>
-<thead>
-<tr>
-<th>说明</th>
-<th>方法</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>new ([ HOST ] [, OPTIONS ])</td>
-<td>构造对象</td>
-</tr>
-<tr>
-<td>login ([LOGIN [,PASSWORD [, ACCOUNT] ] ])</td>
-<td>登录</td>
-</tr>
-<tr>
-<td>binary ()</td>
-<td>字节数据模式</td>
-</tr>
-<tr>
-<td>cwd ( [ DIR ] )</td>
-<td>切换远程目录</td>
-</tr>
-<tr>
-<td>ls ( [ DIR ] )</td>
-<td>列目录</td>
-</tr>
-<tr>
-<td>dir ( [ DIR ] )</td>
-<td>列目录</td>
-</tr>
-<tr>
-<td>get ( REMOTE_FILE [, LOCAL_FILE [, WHERE]] )</td>
-<td>下载文件</td>
-</tr>
-<tr>
-<td>put ( LOCAL_FILE [, REMOTE_FILE ] )</td>
-<td>上传文件</td>
-</tr>
-<tr>
-<td>size ( FILE )</td>
-<td>获取文件大小</td>
-</tr>
-<tr>
-<td>mdtm ( FILE )</td>
-<td>获取文件修改时间</td>
-</tr>
-<tr>
-<td>delete ( FILENAME )</td>
-<td>删除文件</td>
-</tr>
-<tr>
-<td>rename ( OLDNAME, NEWNAME )</td>
-<td>文件重命名</td>
-</tr>
-<tr>
-<td>mkdir ( DIR [, RECURSE ])</td>
-<td>创建目录</td>
-</tr>
-<tr>
-<td>rmdir ( DIR [, RECURSE ])</td>
-<td>删除目录</td>
-</tr>
-<tr>
-<td>quit ()</td>
-<td>退出</td>
-</tr>
-</tbody>
-</table>
-<h4 id="样例代码"><a href="#样例代码" class="headerlink" title="样例代码"></a>样例代码</h4><p>文件上传、下载<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">use Net::FTP;</span><br><span class="line"></span><br><span class="line">my $ftp;</span><br><span class="line">my $host     = &quot;192.168.1.10&quot;;</span><br><span class="line">my $user     = &quot;user&quot;;</span><br><span class="line">my $password = &quot;password&quot;;</span><br><span class="line"></span><br><span class="line">unless ( $ftp = Net::FTP-&gt;new( $host, Port =&gt; 21, Timeout =&gt; 30 ) ) &#123;</span><br><span class="line">    print &quot;ERROR - Cannot connect TO FTP, $@\n&quot;;</span><br><span class="line">    exit(1);</span><br><span class="line">&#125;</span><br><span class="line">unless ( $ftp-&gt;login( $user, $password ) ) &#123;</span><br><span class="line">    print sprintf( &quot;ERROR - Cannot logon, %s\n&quot;, $ftp-&gt;message );</span><br><span class="line">    exit(1);</span><br><span class="line">&#125;</span><br><span class="line">unless ( $ftp-&gt;cwd(&quot;/files&quot;) ) &#123;</span><br><span class="line">    print sprintf( &quot;ERROR - Cannot change directory, %s\n&quot;, $ftp-&gt;message );</span><br><span class="line">    exit(1);</span><br><span class="line">&#125;</span><br><span class="line">$ftp-&gt;binary();</span><br><span class="line">unless ( $ftp-&gt;put( &quot;data.txt&quot;, &quot;data.txt&quot; ) ) &#123;</span><br><span class="line">    print sprintf( &quot;ERROR - Put file failed, %s\n&quot;, $ftp-&gt;message );</span><br><span class="line">    exit(1);</span><br><span class="line">&#125;</span><br><span class="line">unless ( $ftp-&gt;get( &quot;data.zip&quot;, &quot;data.zip&quot; ) ) &#123;</span><br><span class="line">    print sprintf( &quot;ERROR - Get file failed, %s\n&quot;, $ftp-&gt;message );</span><br><span class="line">    exit(1);</span><br><span class="line">&#125;</span><br><span class="line">$ftp-&gt;quit();</span><br></pre></td></tr></table></figure></p>
-<p>文件时间<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">my $mtime = $handler-&gt;mdtm($file)</span><br><span class="line">my ( $sec, $min, $hour, $day, $mon, $year ) = localtime($mtime);</span><br><span class="line">$mtime = sprintf( &quot;%04d-%02d-%02d %02d:%02d:%02d&quot;, $year + 1900, $mon + 1, $day, $hour, $min, $sec );</span><br><span class="line">print &quot;File modification time is $mtime\n&quot;;</span><br></pre></td></tr></table></figure></p>
-<h3 id="Net-SFTP"><a href="#Net-SFTP" class="headerlink" title="Net::SFTP"></a>Net::SFTP</h3><h4 id="模块方法-1"><a href="#模块方法-1" class="headerlink" title="模块方法"></a>模块方法</h4><table>
-<thead>
-<tr>
-<th>说明</th>
-<th>方法</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>new($host, %args)</td>
-<td>构造对象</td>
-</tr>
-<tr>
-<td>do_remove($path)</td>
-<td>切换目录</td>
-</tr>
-<tr>
-<td>ls(\$remote [, $subref ])</td>
-<td>列目录</td>
-</tr>
-<tr>
-<td>get(\$remote [, $local [, \&amp;callback ] ])</td>
-<td>下载文件</td>
-</tr>
-<tr>
-<td>put(\$local, $remote [, \&amp;callback ])</td>
-<td>上传文件</td>
-</tr>
-</tbody>
-</table>
-<h4 id="样例代码-1"><a href="#样例代码-1" class="headerlink" title="样例代码"></a>样例代码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">use Net::SFTP;</span><br><span class="line"></span><br><span class="line">my $sftp;</span><br><span class="line">my $host = &quot;192.168.1.10&quot;;</span><br><span class="line">my %args = (</span><br><span class="line">    &quot;user&quot;     =&gt; &quot;user&quot;,</span><br><span class="line">    &quot;password&quot; =&gt; &quot;password&quot;,</span><br><span class="line">    &quot;debug&quot;    =&gt; 0</span><br><span class="line">);</span><br><span class="line">unless ( $sftp = Net::SFTP-&gt;new( $host, %args ) ) &#123;</span><br><span class="line">    print &quot;ERROR - Cannot connect TO SFTP, $@\n&quot;;</span><br><span class="line">    exit(1);</span><br><span class="line">&#125;</span><br><span class="line">$sftp-&gt;get( &quot;/home/data.txt&quot;, &quot;data.txt&quot; );</span><br><span class="line">unless ( $sftp-&gt;status == 0 ) &#123;</span><br><span class="line">    print &quot;ERROR - Get file failed, $!\n&quot;;</span><br><span class="line">    exit(1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Perl模块下载源"><a href="#Perl模块下载源" class="headerlink" title="Perl模块下载源"></a>Perl模块下载源</h3><p>CPAN: <a href="http://search.cpan.org/" target="_blank" rel="external">http://search.cpan.org/</a><br>MetaCPAN: <a href="https://metacpan.org/" target="_blank" rel="external">https://metacpan.org/</a></p>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/04/29/Perl-FTP-SFTP-开发/" rel="next" title="Perl FTP/SFTP 开发">
+                <i class="fa fa-chevron-left"></i> Perl FTP/SFTP 开发
+              </a>
+            
+          </div>
 
-          
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -626,6 +521,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -645,8 +544,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -722,6 +630,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#服务器配置"><span class="nav-number">1.</span> <span class="nav-text">服务器配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装JDK"><span class="nav-number">2.</span> <span class="nav-text">安装JDK</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建用户、目录"><span class="nav-number">3.</span> <span class="nav-text">创建用户、目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SSH无密码登录"><span class="nav-number">4.</span> <span class="nav-text">SSH无密码登录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装hadoop"><span class="nav-number">5.</span> <span class="nav-text">安装hadoop</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#修改hadoop配置文件"><span class="nav-number">5.1.</span> <span class="nav-text">修改hadoop配置文件</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#hadoop-env-sh-amp-amp-yarn-env-sh"><span class="nav-number">5.1.1.</span> <span class="nav-text">hadoop-env.sh && yarn-env.sh</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#slaves"><span class="nav-number">5.1.2.</span> <span class="nav-text">slaves</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#core-site-xml"><span class="nav-number">5.1.3.</span> <span class="nav-text">core-site.xml</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#hdfs-site-xml"><span class="nav-number">5.1.4.</span> <span class="nav-text">hdfs-site.xml</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#mapred-site-xml"><span class="nav-number">5.1.5.</span> <span class="nav-text">mapred-site.xml</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#yarn-site-xml"><span class="nav-number">5.1.6.</span> <span class="nav-text">yarn-site.xml</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Namenode初始化"><span class="nav-number">5.2.</span> <span class="nav-text">Namenode初始化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#启动集群"><span class="nav-number">5.3.</span> <span class="nav-text">启动集群</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查看节点状态"><span class="nav-number">5.4.</span> <span class="nav-text">查看节点状态</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#访问yarn"><span class="nav-number">5.5.</span> <span class="nav-text">访问yarn</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MapReduce测试"><span class="nav-number">6.</span> <span class="nav-text">MapReduce测试</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -825,6 +744,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
